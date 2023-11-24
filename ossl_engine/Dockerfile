@@ -48,6 +48,10 @@ RUN install2.r --error --skipinstalled \
     leaflet.extras \
     leafgl \
     shinybusy
+# Have to install an archived package https://www.listendata.com/2015/05/r-install-archived-package.html
+RUN R -e 'install.packages("https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_1.6-7.tar.gz", type="source", repos=NULL)'
+RUN R -e 'install.packages("https://cran.r-project.org/src/contrib/Archive/plotKML/plotKML_0.8-3.tar.gz", type="source", repos=NULL)'
+RUN R -e "require(devtools); install_version('plotKML', version = '0.8-3', repos = 'http://cran.us.r-project.org')"
 RUN install2.r --error --skipinstalled \
     yaml \
     pls \
@@ -66,12 +70,11 @@ RUN install2.r --error --skipinstalled \
     matrixStats \
     mlr \
     parallelMap \
-    plotKML \
     rworldmap
 RUN R -e 'install.packages(c("openair", "yardstick"))'
 
-ENV AUTH0_USER=dev-b5nlb7-q.eu
-ENV AUTH0_KEY=jBypUtmOeuorrxqNAZcL8YGq5oNQJ74J
+ENV AUTH0_USER=makalii-metrics.us
+ENV AUTH0_KEY=rSZpW65tm15AiW2a0IqCRKQa4gsjUmEQ
 ENV AUTH0_SECRET=??? # GET FROM AUTH0
 
 COPY ./app/ /srv/shiny-server/
