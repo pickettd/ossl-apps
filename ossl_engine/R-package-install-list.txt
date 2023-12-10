@@ -1,0 +1,13 @@
+mongolite,jsonify,shiny,shinydashboard,leaflet,tidyverse,sf,RColorBrewer,data.table,plotly
+remotes,devtools,systemfonts,triebeard
+DT,shinythemes,shinyjqui,shinyWidgets,shinyjs,shinycssloaders,jsonlite,geojsonio,ggplot2,kableExtra,shinyBS,s2,magrittr
+leaflet.extras,leafgl,shinybusy
+
+// To install rgdal on Mac/Linux I needed to install the system package gdal
+install.packages("https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_1.6-7.tar.gz", type="source", repos=NULL)
+install.packages("https://cran.r-project.org/src/contrib/Archive/plotKML/plotKML_0.8-3.tar.gz", type="source", repos=NULL)
+require(devtools); install_version('plotKML', version = '0.8-3', repos = 'http://cran.us.r-project.org')
+
+yaml,pls,randomForest,tidyr,auth0,readxl,xgboost,Cubist,terra,sp,httr,prospectr,fastDummies,cowplot,matrixStats,mlr,parallelMap,rworldmap
+
+install.packages(c("openair", "yardstick"))
