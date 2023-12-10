@@ -15,3 +15,4 @@ require(devtools); install_version('plotKML', version = '0.8-3', repos = 'http:/
 yaml,pls,randomForest,tidyr,auth0,readxl,xgboost,Cubist,terra,sp,httr,prospectr,fastDummies,cowplot,matrixStats,mlr,parallelMap,rworldmap
 
 install.packages(c("openair", "yardstick"))
+ranger,glmnet
